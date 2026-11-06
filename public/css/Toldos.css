@@ -1,0 +1,52 @@
+
+
+.corpo{
+    display: flex;
+    justify-content: space-evenly;
+     width: 75%;
+    margin: 70px auto;
+}
+
+.galeria img{
+    width: 200px;
+    height: 200px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin: 0px;
+}
+.textos{
+    display: flex;
+    flex-direction: column;
+    width:1400px;
+}
+
+.galeria{
+    display: flex;
+    width: 82%;
+    justify-content: space-evenly;
+    margin: 80px auto;
+
+}
+
+
+.textos p{
+    font-size: 20px;
+}
+.textos h3{
+    font-size: 25px;
+}
+
+.toldo p{
+    text-align: center;
+}
+.imagem-toldo{
+    margin-top: 40px;
+}
+
+.toldo{
+  padding: 5px;
+}

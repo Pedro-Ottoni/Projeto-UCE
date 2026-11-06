@@ -1,0 +1,489 @@
+/* =========================================================
+   RESPONSIVIDADE GLOBAL
+   Carregado por último no layout, depois do CSS de cada página.
+   Breakpoints: 1200px (notebook), 992px (tablet), 768px, 600px (celular)
+   ========================================================= */
+
+/* ---------- Base (todas as larguras) ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+canvas {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+#logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Galerias quebram linha em vez de estourar a tela */
+.galeria,
+.img-sombreadores,
+.img-luminosos,
+.img-letrascaixa,
+.img-fachadas,
+.imgs-trabalhos,
+.secao-cards {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Botão do menu (só aparece no tablet/celular) */
+.menu-toggle {
+  display: none;
+}
+
+/* ---------- Notebook (até 1200px) ---------- */
+@media (max-width: 1200px) {
+  nav {
+    width: auto;
+    flex: 0 1 800px;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .dropdown-content {
+    top: 28px;
+  }
+
+  .secao-footer {
+    width: 90%;
+    gap: 20px;
+  }
+}
+
+/* ---------- Tablet (até 992px) ---------- */
+@media (max-width: 992px) {
+  /* Cabeçalho com menu hambúrguer */
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    box-sizing: border-box;
+  }
+
+  #logo {
+    max-height: 70px;
+    width: auto;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px !important;
+    height: 46px;
+    padding: 0 !important;
+    font-size: 28px !important;
+    line-height: 1;
+    background: transparent !important;
+    color: #fdc92f !important;
+    border: 2px solid #fdc92f !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    cursor: pointer;
+  }
+
+  .menu-toggle:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  nav {
+    display: none;
+    flex: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 0;
+  }
+
+  header.menu-aberto nav {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    font-size: 18px;
+    padding: 12px 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Submenus ficam sempre visíveis dentro do menu mobile */
+  .dropdown-content,
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: static;
+    border: none;
+    box-shadow: none;
+    min-width: 0;
+    background-color: transparent;
+    padding-left: 20px;
+  }
+
+  .dropdown-content a {
+    font-size: 16px;
+    padding: 10px 4px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: transparent;
+    color: #fdc92f;
+  }
+
+  .faixa {
+    height: 18px;
+  }
+
+  /* Seções de introdução (texto + imagem) empilhadas */
+  .introducao,
+  .secao-historia,
+  .corpo,
+  .int-sombreadores,
+  .int-luminosos,
+  .int-letrascaixa,
+  .int-fachadas,
+  .int-trabalhos,
+  .int-sobre {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto;
+    gap: 24px;
+  }
+
+  .texto,
+  .textos,
+  .historia {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .introducao img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* Home: cards de produtos */
+  .secao-cards {
+    width: 90%;
+    margin: 60px auto;
+    justify-content: center;
+  }
+
+  .cards {
+    height: auto;
+    min-height: 340px;
+  }
+
+  .cards:hover {
+    transform: none;
+  }
+
+  /* Home: slider */
+  .slider-wrapper {
+    width: 90%;
+    margin: 60px auto;
+  }
+
+  .slider {
+    height: 380px;
+  }
+
+  /* Galerias de produtos */
+  .galeria,
+  .img-sombreadores,
+  .img-luminosos,
+  .img-letrascaixa,
+  .img-fachadas,
+  .imgs-trabalhos {
+    width: 90%;
+    justify-content: center;
+    margin: 40px auto;
+  }
+
+  .img-fachadas img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Sobre: certificados */
+  .img-certificados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* FAQ e Contato */
+  .container {
+    width: 92%;
+  }
+
+  .form-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .form-container,
+  .info-container {
+    width: 100%;
+  }
+
+  /* Login / Cadastro / 404 */
+  .container-conta {
+    width: 90%;
+    max-width: 480px;
+    margin: 40px auto;
+  }
+
+  /* Admin */
+  .container-admin {
+    width: 92%;
+    margin: 30px auto;
+  }
+
+  /* Rodapé */
+  .secao-footer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px 40px;
+  }
+
+  .bloco-footer {
+    flex: 1 1 200px;
+  }
+}
+
+/* ---------- Até 768px ---------- */
+@media (max-width: 768px) {
+  /* Simulador */
+  main:has(.container-simulador) {
+    width: 92%;
+    margin: 30px auto 60px auto;
+  }
+
+  .container-simulador {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-simulador {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .card-previa {
+    margin-top: 24px;
+  }
+
+  /* Admin: cards e colunas empilhados, tabelas com rolagem lateral */
+  .resumo,
+  .duas-colunas {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-resumo,
+  .duas-colunas div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tabela {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .acoes {
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Celular (até 600px) ---------- */
+@media (max-width: 600px) {
+  .texto h3,
+  .textos h3 {
+    font-size: 22px;
+  }
+
+  .texto p,
+  .textos p,
+  .historia p {
+    font-size: 17px;
+  }
+
+  /* Quebras de linha forçadas atrapalham em tela pequena */
+  .texto p br {
+    display: none;
+  }
+
+  /* Home */
+  .introducao,
+  .secao-historia {
+    margin: 30px auto;
+  }
+
+  .secao-cards {
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  .secao-cards .link {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .cards {
+    width: auto;
+    min-height: 0;
+  }
+
+  .slider-wrapper {
+    margin: 40px auto;
+  }
+
+  .slider-wrapper h2 {
+    font-size: 22px;
+  }
+
+  .slider-wrapper .subtitulo {
+    margin-bottom: 24px;
+  }
+
+  .slider {
+    height: 240px;
+    border-radius: 10px;
+  }
+
+  .slider::after {
+    border-radius: 10px;
+  }
+
+  .btn-prev,
+  .btn-next {
+    width: 38px !important;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  /* Galerias: duas imagens por linha */
+  .galeria,
+  .img-sombreadores,
+  .img-luminosos,
+  .img-letrascaixa,
+  .img-fachadas,
+  .imgs-trabalhos {
+    gap: 12px;
+  }
+
+  .galeria > div,
+  .img-sombreadores > div,
+  .img-letrascaixa > div,
+  .img-fachadas > div,
+  .img-luminosos > img,
+  .imgs-trabalhos > img {
+    flex: 0 1 calc(50% - 6px);
+  }
+
+  .galeria img,
+  .img-sombreadores img,
+  .img-luminosos img,
+  .img-letrascaixa img,
+  .img-fachadas img,
+  .imgs-trabalhos img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .certificados img,
+  .img-certificados img {
+    width: 45%;
+    box-sizing: border-box;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  /* Contato */
+  .icone img {
+    margin-top: 16px;
+  }
+
+  /* Simulador */
+  .titulo-simulador {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .linha-inputs {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .label-total,
+  .valor-total-form {
+    font-size: 19px;
+  }
+
+  /* Login / Cadastro */
+  .card-conta {
+    padding: 20px;
+  }
+
+  .pagina-404 h1 {
+    font-size: 64px;
+  }
+
+  /* Rodapé em coluna única */
+  footer {
+    padding: 40px 0;
+  }
+
+  .secao-footer {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .bloco-footer {
+    flex: none;
+  }
+
+  .titulo-bloco {
+    margin-bottom: 2px;
+  }
+}

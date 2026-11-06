@@ -1,0 +1,187 @@
+
+.azul {
+  color: #00145d;
+}
+
+.container-conta {
+  width: 40%;
+  margin: 60px auto;
+}
+
+.card-conta {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-conta form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card-conta form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.card-conta button,
+.container-admin button {
+  padding: 10px 20px;
+  background-color: #000256;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-conta button:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-conta a,
+.container-admin a {
+  color: #000256;
+}
+
+.msg-erro {
+  background-color: #ffe0e0;
+  color: #a00000;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.msg-sucesso {
+  background-color: #e0ffe5;
+  color: #006b16;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.pagina-404 {
+  text-align: center;
+}
+
+.pagina-404 h1 {
+  font-size: 90px;
+  margin: 0;
+  color: #fdc92f;
+}
+
+
+.container-admin {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.resumo {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.card-resumo {
+  width: 30%;
+  background-color: #000256;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.card-resumo h3 {
+  font-size: 40px;
+  margin: 5px;
+  color: #fdc92f;
+}
+
+.duas-colunas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.duas-colunas div {
+  width: 48%;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.tabela th {
+  background-color: #000256;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.acoes {
+  display: flex;
+  gap: 5px;
+}
+
+.container-admin .btn-excluir {
+  background-color: #b00020;
+}
+
+.form-produto {
+  margin: 30px 0;
+}
+
+.card-conta form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.miniatura {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.filtro-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.container-admin .filtro-categorias a {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000256;
+  border: 1px solid #000256;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.container-admin .filtro-categorias a:hover {
+  background-color: #fff4d1;
+}
+
+.container-admin .filtro-categorias a.ativo {
+  background-color: #000256;
+  color: #fdc92f;
+  font-weight: bold;
+}

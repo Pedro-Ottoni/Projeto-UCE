@@ -1,0 +1,310 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5e5; 
+}
+
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 105px auto;
+}
+
+.titulo-simulador {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
+
+.container-simulador {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+
+.card-simulador {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1; 
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-simulador h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+.linha-inputs {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.grupo-input label {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.grupo-input input, 
+.grupo-input select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #999999;
+    border-radius: 10px; 
+    background-color: #ffffff;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.input-total {
+    margin-bottom: 25px;
+}
+
+
+.preco-m2-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+.seta-dropdown {
+    font-size: 10px;
+    color: #666666;
+}
+
+.divisor-card {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin: 15px 0 20px 0;
+    width: 100%;
+}
+
+
+.linha-total-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.label-total {
+    font-size: 22px;
+    color: #000000;
+}
+
+.valor-total-form {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.btn-solicitar-simular {
+    background-color: #fdc92f;
+    color: #000000;
+    border: none;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+.btn-solicitar-simular:hover {
+    background-color: #e5b324;
+}
+
+
+.secao-resultado {
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.resultado-label {
+    font-size: 14px;
+    color: #555555;
+    margin: 0 0 6px 0;
+}
+
+.resultado-destaque {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+.secao-valor-estimado {
+    border-bottom: none;
+    margin-bottom: auto; 
+}
+
+.label-estimado {
+    font-size: 15px;
+    color: #444444;
+}
+
+.valor-grande {
+    font-size: 26px; 
+}
+
+.rodape-detalhes-resultado {
+    margin-top: 20px;
+}
+
+.rodape-detalhes-resultado p {
+    font-size: 13px;
+    color: #666666;
+    margin: 4px 0;
+}
+
+.preco-m2-dropdown {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preco-m2-dropdown:hover {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.preco-m2-dropdown.ativo .seta-dropdown {
+    transform: rotate(180deg);
+}
+
+.resultado-descricao,
+.resultado-durabilidade {
+    font-size: 15px;
+    color: #555555;
+    margin: 0;
+    font-style: italic;
+}
+
+.resultado-caracteristicas {
+    padding: 10px 0;
+}
+
+.resultado-caracteristicas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resultado-caracteristicas li {
+    font-size: 14px;
+    color: #666666;
+    padding: 5px 0;
+    margin-left: 0;
+}
+
+.resultado-caracteristicas li:before {
+    content: "✓ ";
+    color: #fdc92f;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.resultado-destaque,
+.resultado-descricao,
+.resultado-durabilidade,
+.resultado-caracteristicas {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.7;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comparativo-materiais {
+    display: none;
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+.preco-m2-dropdown.ativo + .comparativo-materiais {
+    display: block;
+}
+
+.comparativo-materiais li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.comparativo-materiais li:last-child {
+    border-bottom: none;
+}
+
+.comparativo-materiais li:hover {
+    background-color: #f5f5f5;
+}
+
+.comparativo-materiais li.selecionado {
+    background-color: #fff4d1;
+    border-left: 4px solid #fdc92f;
+}
+
+.card-previa {
+    margin-top: 40px;
+    min-height: auto;
+}
+
+#previa-toldo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.legenda-previa {
+    font-size: 13px;
+    color: #666666;
+    margin: 10px 0 0 0;
+}

@@ -1,0 +1,57 @@
+.int-sobre{
+     display: flex;
+    justify-content: space-around;
+    width: 82%;
+    margin: 70px auto;
+}
+.texto p{
+    font-size: 18px;
+}
+.texto h3{
+    font-size: 25px;
+}
+.texto{
+    width: 1400px;
+}
+.titulo h3{
+    font-size: 22px;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin: 0px;
+}
+.certificados{
+    display: flex;
+    justify-content: space-evenly;
+  
+}
+.certificados img{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 190px;
+}
+
+
+
+button{
+      background-color: #000256;
+  color: white;
+  width: 10%;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.img-certificados img{
+    padding: 5px;
+}

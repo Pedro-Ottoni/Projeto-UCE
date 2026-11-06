@@ -1,0 +1,100 @@
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #000256; 
+    padding: 60px 0;          
+    width: 100%;
+    
+}
+
+.secao-footer {
+    display: flex;
+    justify-content: space-between; 
+    width: 74%;            
+}
+
+
+.bloco-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;                     
+}
+
+.titulo-bloco {
+    color: #fdc92f;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+.sub-titulo {
+    margin-top: 25px;
+}
+
+
+.bloco-footer span {
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+.bloco-footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.bloco-footer a:hover {
+    color: #fdc92f; 
+}
+
+.btn-orcamento {
+    background-color: #fdc92f !important;
+    color: #000000 !important;          
+    border: none !important;
+    
+    
+    padding: 12px 24px !important;       
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px !important;     
+    cursor: pointer;
+    
+    
+    white-space: nowrap !important;        
+    display: block !important;
+    width: max-content !important;        
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-orcamento:hover {
+    background-color: #e5b324;
+    transform: translateY(-2px); 
+}
+
+
+.midia {
+    display: flex;
+    gap: 15px;                 
+    margin-top: 5px;
+}
+
+.logo-rede {
+    width: 32px;               
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-rede:hover {
+    transform: scale(1.2);   
+}

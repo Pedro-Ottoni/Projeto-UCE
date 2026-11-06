@@ -1,0 +1,34 @@
+.int-fachadas{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 70px auto;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin: 0px;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+  
+  }
+  .texto p{
+font-size: 20px;
+  }
+  .texto h3{
+    font-size: 25px;
+  }
+  .img-fachadas{
+ display: flex;
+ width: 82%;
+ justify-content: space-evenly;
+ margin: 50px auto;
+  
+  }
+  .img{
+margin-top: 30px;
+  }
