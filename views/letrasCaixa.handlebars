@@ -1,0 +1,35 @@
+    <main>
+      <section class="int-letrascaixa">
+        <div class="texto">
+          <h3>Letras Caixa</h3>
+          <hr />
+          <p>
+            As letras caixa são elementos de comunicação visual em alto-relevo,
+            muito utilizados em fachadas comerciais, recepções e ambientes
+            corporativos.
+          </p>
+          <p>
+            Produzidas em materiais como aço inox, acrílico, PVC ou MDF, elas
+            conferem sofisticação, destaque e profissionalismo à identidade
+            visual de uma marca.
+          </p>
+          <p>
+            Podem ser iluminadas ou não, e são personalizáveis em tamanho, cor e
+            acabamento, o que permite adaptar o design ao estilo de cada
+            empresa.
+          </p>
+          <p>
+            As letras caixa são uma excelente opção para quem busca
+            visibilidade, durabilidade e impacto visual.
+          </p>
+        </div>
+        
+      </section>
+      <section class="img-letrascaixa">
+        {{#each produtos}}
+        <div><img src="/img/{{imagem}}" alt="{{nome}}" /></div>
+        {{else}}
+        <p>Nenhum produto cadastrado no momento.</p>
+        {{/each}}
+      </section>
+    </main>

@@ -1,0 +1,66 @@
+  <main class="container-admin">
+    <h2>Gerenciar <span class="azul">Produtos</span></h2>
+    <a href="/admin/relatorios">&gt; Ver relatórios</a>
+
+    {{#if erro}}
+    <p class="msg-erro">{{erro}}</p>
+    {{/if}}
+    {{#if sucesso}}
+    <p class="msg-sucesso">{{sucesso}}</p>
+    {{/if}}
+
+    <section class="card-conta form-produto">
+      <h3>Cadastrar novo produto</h3>
+
+      <form action="/admin/produtos" method="post" enctype="multipart/form-data">
+        <label for="nome">Nome do produto*</label>
+        <input type="text" id="nome" name="nome" maxlength="30" required>
+
+        <label for="categoria">Categoria (página onde vai aparecer)*</label>
+        <select id="categoria" name="categoria" required>
+          {{#each categorias}}
+          <option value="{{valor}}">{{nome}}</option>
+          {{/each}}
+        </select>
+
+        <label for="imagem">Imagem* (PNG, JPG ou WEBP)</label>
+        <input type="file" id="imagem" name="imagem" accept=".png,.jpg,.jpeg,.webp" required>
+
+        <button type="submit">Cadastrar produto</button>
+      </form>
+    </section>
+
+    <h3>Produtos cadastrados</h3>
+
+    <div class="filtro-categorias">
+      <a href="/admin/produtos" class="{{#unless filtro}}ativo{{/unless}}">Todos ({{total}})</a>
+      {{#each filtros}}
+      <a href="/admin/produtos?categoria={{valor}}" class="{{#if ativo}}ativo{{/if}}">{{nome}} ({{quantidade}})</a>
+      {{/each}}
+    </div>
+
+    <table class="tabela">
+      <tr>
+        <th>ID</th>
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+      </tr>
+      {{#each produtos}}
+      <tr>
+        <td>{{id}}</td>
+        <td><img src="/img/{{imagem}}" alt="{{nome}}" class="miniatura"></td>
+        <td>{{nome}}</td>
+        <td>{{categoriaNome}}</td>
+        <td>
+          <form action="/admin/produtos/excluir/{{id}}{{#if @root.filtro}}?categoria={{@root.filtro}}{{/if}}" method="post" onsubmit="return confirm('Excluir este produto?')">
+            <button type="submit" class="btn-excluir">Excluir</button>
+          </form>
+        </td>
+      </tr>
+      {{else}}
+      <tr><td colspan="5">Nenhum produto cadastrado.</td></tr>
+      {{/each}}
+    </table>
+  </main>

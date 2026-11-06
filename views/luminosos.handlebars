@@ -1,0 +1,35 @@
+    <main>
+      <section class="int-luminosos">
+        <div class="texto">
+          <h3>Luminosos</h3>
+          <hr />
+          <p>
+            Os luminosos são peças publicitárias iluminadas, ideais para
+            destacar marcas, nomes de empresas ou serviços, especialmente à
+            noite ou em ambientes com pouca luz.
+          </p>
+          <p>
+            Utilizando iluminação interna com LED ou fluorescentes, eles
+            garantem excelente visibilidade e atraem a atenção do público de
+            forma eficaz.
+          </p>
+          <p>
+            Podem ser produzidos em diversos formatos, tamanhos e materiais,
+            como acrílico ou metal, adaptando-se ao estilo e à identidade visual
+            de cada negócio.
+          </p>
+          <p>
+            Além de funcionais, os luminosos agregam valor estético e
+            profissionalismo à fachada de qualquer estabelecimento.
+          </p>
+        </div>
+        
+      </section>
+      <section class="img-luminosos">
+        {{#each produtos}}
+        <img src="/img/{{imagem}}" alt="{{nome}}" />
+        {{else}}
+        <p>Nenhum produto cadastrado no momento.</p>
+        {{/each}}
+      </section>
+    </main>

@@ -1,0 +1,95 @@
+    <main>
+    <h1 class="titulo-simulador">Simule o valor do seu toldo</h1>
+    
+    <section class="container-simulador">
+        
+        <div class="card-simulador card-dados">
+            <h2>Dados do seu toldo</h2>
+            
+            <form id="simulacao-form">
+                <div class="linha-inputs">
+                    <div class="grupo-input">
+                        <label for="largura">Largura (m):</label>
+                        <input type="text" id="largura" name="largura" placeholder="3.0 m" value="3.0" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="comprimento">Comprimento (m):</label>
+                        <input type="text" id="comprimento" name="comprimento" placeholder="2.0 m" value="2.0" required>
+                    </div>
+                </div>
+
+                <div class="grupo-input input-total">
+                    <label for="material">Material:</label>
+                    <select id="material" name="material" required>
+                        <option value="Lona">Lona</option>
+                        <option value="Ferro">Ferro</option>
+                        <option value="Policarbonato">Policarbonato</option>
+                        <option value="Alumínio">Alumínio</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input input-total" id="grupo-cor">
+                    <label for="cor">Cor da lona:</label>
+                    <select id="cor" name="cor">
+                        <option value="Azul">Azul</option>
+                        <option value="Amarelo">Amarelo</option>
+                        <option value="Vermelho">Vermelho</option>
+                        <option value="Verde">Verde</option>
+                    </select>
+                </div>
+
+                <div class="preco-m2-dropdown">
+                    <span>Preço por metro quadrado: R$ 100</span>
+                    <span class="seta-dropdown">▼</span>
+                </div>
+                <ul class="comparativo-materiais"></ul>
+
+                <hr class="divisor-card">
+
+                <div class="linha-total-formulario">
+                    <span class="label-total">Total:</span>
+                    <span class="valor-total-form">R$</span>
+                </div>
+
+                <button type="submit" class="btn-solicitar-simular">Solicitar orçamento</button>
+            </form>
+        </div>
+
+        <div class="card-simulador card-resultado">
+            <h2>Resultado</h2>
+            
+            <div class="secao-resultado">
+                <p class="resultado-label">Área do toldo:</p>
+                <p class="resultado-destaque">6 m²</p>
+            </div>
+
+            <div class="secao-resultado">
+                <p class="resultado-label">Material:</p>
+                <p class="resultado-destaque">Lona</p>
+            </div>
+
+            <div class="secao-resultado">
+                <p class="resultado-descricao"></p>
+                <p class="resultado-label">Durabilidade: <span class="resultado-durabilidade"></span></p>
+                <div class="resultado-caracteristicas"></div>
+            </div>
+
+            <div class="secao-resultado secao-valor-estimado">
+                <p class="resultado-label label-estimado">Valor estimado</p>
+                <p class="resultado-destaque valor-grande">R$ 600</p>
+            </div>
+
+            <div class="rodape-detalhes-resultado">
+                <p>Área: 3.0 m x 2.0 m = 6 m²</p>
+                <p>Preço: R$ 100/m²</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="card-simulador card-previa">
+        <h2>Veja como vai ficar</h2>
+        <canvas id="previa-toldo" width="900" height="380"></canvas>
+        <p class="legenda-previa">Desenho ilustrativo. O boneco tem 1,70 m para você comparar o tamanho do toldo.</p>
+    </section>
+</main>

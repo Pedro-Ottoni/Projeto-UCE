@@ -1,0 +1,36 @@
+    <main>
+      <section class="int-sombreadores">
+        <div class="texto">
+          <h3>Sombreadores</h3> <hr>
+          <p>
+            Os sombreadores são estruturas projetadas para oferecer proteção
+            contra os raios solares, proporcionando sombra e conforto em áreas
+            externas.
+          </p>
+          <p>
+            Fabricados com tecidos especiais que bloqueiam parte da radiação UV,
+            eles são muito utilizados em estacionamentos, playgrounds, quadras
+            esportivas e áreas de lazer.
+          </p>
+          <p>
+            Além de funcionais, os sombreadores possuem um design moderno e
+            podem ser encontrados em diversas cores e formatos, contribuindo
+            para a estética do ambiente.
+          </p>
+          <p>
+            São uma excelente alternativa para quem busca proteção solar com
+            durabilidade, praticidade e estilo.
+          </p>
+        </div>
+        
+      </section>
+      <section class="img-sombreadores">
+        {{#each produtos}}
+        <div>
+          <img src="/img/{{imagem}}" alt="{{nome}}" />
+        </div>
+        {{else}}
+        <p>Nenhum produto cadastrado no momento.</p>
+        {{/each}}
+      </section>
+    </main>

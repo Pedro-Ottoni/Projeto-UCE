@@ -1,0 +1,44 @@
+  <main class="container-admin">
+    <h2>Gerenciar <span class="azul">Usuários</span></h2>
+    <a href="/admin/relatorios">&gt; Ver relatórios</a>
+
+    {{#if erro}}
+    <p class="msg-erro">{{erro}}</p>
+    {{/if}}
+
+    <table class="tabela">
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Tipo</th>
+        <th>Cadastrado em</th>
+        <th>Ações</th>
+      </tr>
+      {{#each usuarios}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{nome}}</td>
+        <td>{{email}}</td>
+        <td>{{tipo}}</td>
+        <td>{{data_cadastro}}</td>
+        <td class="acoes">
+          {{#if euMesmo}}
+          <span>(você)</span>
+          {{else}}
+          <form action="/admin/usuarios/tipo/{{id}}" method="post">
+            {{#if admin}}
+            <button type="submit">Tornar cliente</button>
+            {{else}}
+            <button type="submit">Tornar admin</button>
+            {{/if}}
+          </form>
+          <form action="/admin/usuarios/excluir/{{id}}" method="post" onsubmit="return confirm('Excluir este usuário?')">
+            <button type="submit" class="btn-excluir">Excluir</button>
+          </form>
+          {{/if}}
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </main>

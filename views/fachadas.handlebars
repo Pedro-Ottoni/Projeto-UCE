@@ -1,0 +1,28 @@
+    <main>
+      <section class="int-fachadas">
+        <div class="texto">
+          <h3>Fachadas</h3>
+          <hr />
+          <p>
+          As fachadas são a parte frontal de edificações e exercem um papel fundamental na identidade visual de casas e comércios. 
+          </p>
+          <p>
+         Mais do que um elemento estético, a fachada é o cartão de visita de um imóvel, refletindo o estilo, a personalidade e, no caso de empresas, os valores da marca.
+          </p>
+          <p>
+          Podem ser construídas com diversos materiais, como vidro, alumínio, madeira, ACM, entre outros, combinando beleza, funcionalidade e resistência. 
+          </p>
+          <p>
+         Uma fachada bem projetada valoriza o imóvel, atrai olhares e contribui para uma primeira impressão positiva.
+          </p>
+        </div>
+        
+      </section>
+      <section class="img-fachadas">
+        {{#each produtos}}
+        <div><img src="/img/{{imagem}}" alt="{{nome}}" /></div>
+        {{else}}
+        <p>Nenhum produto cadastrado no momento.</p>
+        {{/each}}
+      </section>
+    </main>

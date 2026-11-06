@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/cabecalho.css" />
+    <link rel="stylesheet" href="/css/rodape.css" />
+    {{#if css}}
+    <link rel="stylesheet" href="/css/{{css}}.css" />
+    {{/if}}
+    <link rel="stylesheet" href="/css/responsivo.css" />
+    <title>{{titulo}} - Toldos e Companhia</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img id="logo" src="/img/logo toldo&cia.png" alt="Toldos e Companhia" />
+      </div>
+      <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav>
+        <a href="/">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Produtos</a>
+          <div class="dropdown-content">
+            <a href="/toldos">Toldos</a>
+            <a href="/sombreadores">Sombreadores</a>
+            <a href="/luminosos">Luminosos</a>
+            <a href="/letras-caixa">Letras Caixa</a>
+            <a href="/fachadas">Fachadas</a>
+          </div>
+        </div>
+
+        <a href="/sobre">Sobre</a>
+        <a href="/contato">Contato</a>
+        <a href="/simular">Simulação</a>
+
+        {{#if usuarioLogado}}
+        <div class="dropdown">
+          <a href="#">{{usuarioLogado.nome}}</a>
+          <div class="dropdown-content">
+            {{#if isAdmin}}
+            <a href="/admin/relatorios">Relatórios</a>
+            <a href="/admin/produtos">Produtos</a>
+            <a href="/admin/usuarios">Usuários</a>
+            {{/if}}
+            <a href="/logout">Sair</a>
+          </div>
+        </div>
+        {{else}}
+        <a href="/login">Entrar</a>
+        {{/if}}
+      </nav>
+    </header>
+
+    {{#unless semFaixa}}
+    <div class="faixa"></div>
+    {{/unless}}
+
+    {{{body}}}
+
+    <footer>
+      <section class="secao-footer">
+
+        <div class="bloco-footer">
+          <p class="titulo-bloco">LOCALIZAÇÃO</p>
+          <span>Rua Osvaldo Benedito Bertozi, 90</span>
+          <span>Jardim Philadelphia</span>
+          <span>Poços de Caldas - MG</span>
+          <span>CEP: 37704-138</span>
+        </div>
+
+        <div class="bloco-footer">
+          <p class="titulo-bloco">NAVEGAÇÃO</p>
+          <a href="/">&gt; Home</a>
+          <a href="/toldos">&gt; Produtos</a>
+          <a href="/sobre">&gt; Sobre</a>
+          <a href="/contato">&gt; Contato</a>
+          <a href="/simular">&gt; Simulação</a>
+        </div>
+
+        <div class="bloco-footer">
+          <p class="titulo-bloco">SOBRE A EMPRESA</p>
+          <a href="/sobre">Nossa História</a>
+          <a href="/trabalhos">Nossos Trabalhos</a>
+        </div>
+
+        <div class="bloco-footer bloco-contato">
+          <p class="titulo-bloco">ENTRE EM CONTATO</p>
+          <span>(35) 98831-1771</span>
+          <a href="mailto:toldosEcia@gmail.com">toldosEcia@gmail.com</a>
+
+          <div class="container-btn">
+            <a href="/contato"><button class="btn-orcamento">Solicitar Orçamento</button></a>
+          </div>
+        </div>
+
+        <div class="bloco-footer">
+          <p class="titulo-bloco">SUPORTE</p>
+          <a href="/faq">FAQ - Perguntas Frequentes</a>
+          <a href="{{linkWhatsapp}}" target="_blank">Chat de Atendimento</a>
+
+          <p class="titulo-bloco sub-titulo">SIGA NOSSAS REDES</p>
+          <div class="midia">
+            <a href="https://www.instagram.com/toldosecompanhia/" target="_blank"><img src="/img/logo-instagram-rodape.png" class="logo-rede" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/toldoscia/?locale=pt_BR" target="_blank"><img src="/img/logo_facebook_rodape.png" class="logo-rede" alt="Facebook" /></a>
+            <a href="{{linkWhatsapp}}" target="_blank"><img src="/img/logo_whatsapp_rodape.png" class="logo-rede" alt="WhatsApp" /></a>
+          </div>
+        </div>
+
+      </section>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.querySelector("header");
+        var botao = document.querySelector(".menu-toggle");
+        if (!header || !botao) return;
+        botao.addEventListener("click", function () {
+          var aberto = header.classList.toggle("menu-aberto");
+          botao.setAttribute("aria-expanded", aberto ? "true" : "false");
+          botao.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+          botao.textContent = aberto ? "✕" : "☰";
+        });
+      })();
+    </script>
+
+    {{#if script}}
+    <script src="/js/scipt.js"></script>
+    {{/if}}
+  </body>
+</html>

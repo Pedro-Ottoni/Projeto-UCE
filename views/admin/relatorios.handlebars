@@ -1,0 +1,80 @@
+  <main class="container-admin">
+    <h2><span class="azul">Relatórios</span> - Área do Administrador</h2>
+    <a href="/admin/usuarios">&gt; Gerenciar usuários</a> |
+    <a href="/admin/produtos">&gt; Gerenciar produtos</a>
+
+    <section class="resumo">
+      <div class="card-resumo">
+        <p>Contatos recebidos</p>
+        <h3>{{totais.contatos}}</h3>
+      </div>
+      <div class="card-resumo">
+        <p>Usuários cadastrados</p>
+        <h3>{{totais.usuarios}}</h3>
+      </div>
+      <div class="card-resumo">
+        <p>Produtos no catálogo</p>
+        <h3>{{totais.produtos}}</h3>
+      </div>
+    </section>
+
+    <section class="duas-colunas">
+      <div>
+        <h3>Contatos por cidade</h3>
+        <table class="tabela">
+          <tr>
+            <th>Cidade</th>
+            <th>Quantidade</th>
+          </tr>
+          {{#each porCidade}}
+          <tr>
+            <td>{{cidade}}</td>
+            <td>{{quantidade}}</td>
+          </tr>
+          {{else}}
+          <tr><td colspan="2">Nenhum contato ainda.</td></tr>
+          {{/each}}
+        </table>
+      </div>
+
+      <div>
+        <h3>Produtos por categoria</h3>
+        <table class="tabela">
+          <tr>
+            <th>Categoria</th>
+            <th>Quantidade</th>
+          </tr>
+          {{#each porCategoria}}
+          <tr>
+            <td>{{categoria}}</td>
+            <td>{{quantidade}}</td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </section>
+
+    <h3>Todos os contatos recebidos</h3>
+    <table class="tabela">
+      <tr>
+        <th>Data</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Cidade</th>
+        <th>Telefone</th>
+        <th>Mensagem</th>
+      </tr>
+      {{#each contatos}}
+      <tr>
+        <td>{{data_envio}}</td>
+        <td>{{nome}}</td>
+        <td>{{email}}</td>
+        <td>{{cidade}}</td>
+        <td>{{telefone}}</td>
+        <td>{{mensagem}}</td>
+      </tr>
+      {{else}}
+      <tr><td colspan="6">Nenhum contato recebido ainda.</td></tr>
+      {{/each}}
+    </table>
+  </main>

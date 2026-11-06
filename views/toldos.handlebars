@@ -1,0 +1,24 @@
+    <main>
+        <section class="corpo">
+            <div class="textos">
+                <h3>Toldos</h3> <hr>
+                <p>Os toldos são estruturas versáteis e funcionais utilizadas para proteger ambientes externos contra sol, chuva e vento. </p>
+                <p>Geralmente feitos de lona, policarbonato ou outros materiais resistentes, eles podem ser fixos ou retráteis, adaptando-se a diferentes necessidades e estilos arquitetônicos.</p>
+                <p>Muito comuns em varandas, janelas, portas e áreas comerciais, os toldos ajudam a conservar a temperatura interna dos ambientes, proporcionando conforto e economia de energia. </p>
+                <p>Além da utilidade, também agregam valor estético, contribuindo para a decoração de fachadas e espaços ao ar livre.</p>
+            </div>
+            
+        </section>
+
+        <div class="galeria">
+            {{#each produtos}}
+            <div class="toldo">
+              <img src="/img/{{imagem}}" alt="{{nome}}">
+              <p>{{nome}}</p>
+            </div>
+            {{else}}
+            <p>Nenhum produto cadastrado no momento.</p>
+            {{/each}}
+          </div>
+        
+    </main>

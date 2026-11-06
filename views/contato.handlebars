@@ -1,0 +1,49 @@
+  <main class="container">
+    <section class="form-section">
+      
+      <div class="form-container">
+        <h2>Formulário de <span class="azul">Contato</span></h2>
+        {{#if erro}}
+        <p class="msg-erro">{{erro}}</p>
+        {{/if}}
+        <form action="/contato" method="post">
+          <label for="nome">Nome*</label>
+          <input type="text" id="nome" name="nome" maxlength="30" required>
+
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" maxlength="50" required>
+
+          <label for="cidade">Cidade*</label>
+          <input type="text" id="cidade" name="cidade" maxlength="50" required>
+
+          <label for="telefone">Telefone (DDD)*</label>
+          <input type="tel" id="telefone" name="telefone" maxlength="15" required>
+
+          <label for="mensagem">Mensagem*</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+      </div>
+
+      <div class="info-container">
+        <div>
+            <h2>Informações para <span class="azul">Contato</span></h2>
+           <div class="icone"><img src="/img/localizacao.png.png" alt=""> <p><strong>End:</strong> R. Osvaldo Benedito Bertozi, 90 - Jardim Philadelphia, Poços de Caldas - MG, 37710-322</p></div>
+            <div class="icone"><img src="/img/telefone.png.png" alt=""><p><strong>Tel:</strong> (35) 98831-1771</p></div>
+            <div class="icone"><img src="/img/whatsapp.png" alt=""><p><strong>WhatsApp:</strong> (35) 98831-1771</p></div>
+            <div class="icone"><img src="/img/email.png" alt=""><p><strong>Email:</strong> kadut@toldosecia.com</p></div>
+        </div>
+<div>
+    
+            <h2>Horários de <span class="azul">Funcionamento</span></h2>
+            <ul>
+              <div class="relogio"><img src="/img/relogio_domingo.png" alt=""><li>Segunda a sexta - 08:00 às 17:00</li></div>
+              <div class="relogio"><img src="/img/relogio_domingo.png" alt=""><li>Sábado - 09:00 às 12:00</li></div>
+              <div class="relogio"><img src="/img/relogio_domingo.png" alt=""><li>Domingo - Fechado</li></div>
+            </ul>
+</div>
+      </div>
+
+    </section>
+  </main>
