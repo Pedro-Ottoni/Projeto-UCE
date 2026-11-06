@@ -1,0 +1,23 @@
+{
+  "name": "toldos-e-companhia",
+  "version": "1.0.0",
+  "description": "Site Toldos e Companhia com Node.js, Express, Handlebars e MySQL",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.22.3",
+    "express-handlebars": "^9.0.2",
+    "express-session": "^1.19.0",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
